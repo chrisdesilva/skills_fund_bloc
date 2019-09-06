@@ -15,8 +15,7 @@ const LoanApp = React.forwardRef((props, ref) => {
     const [programName, setProgramName] = useState(programLoanInfo[0].name)
     const [active, setActive] = useState({
         program0: false,
-        program1: false,
-        program2: false
+        program1: false
     })
     const activeClass = "menu-item cursor-pointer border-2 rounded border-black text-center py-2 mb-2 bg-primary text-white" 
     const inactiveClass = "menu-item cursor-pointer border-2 rounded border-black text-center py-2 mb-2" 
@@ -35,8 +34,7 @@ const LoanApp = React.forwardRef((props, ref) => {
             case 0: 
                 setActive({
                     program0: !active.program0,
-                    program1: false,
-                    program2: false
+                    program1: false
                 })
                 setLoanUrl(programLoanInfo[0].url)
                 setProgramName(programLoanInfo[0].name)
@@ -44,17 +42,7 @@ const LoanApp = React.forwardRef((props, ref) => {
             case 1: 
                 setActive({
                     program0: false,
-                    program1: !active.program1,
-                    program2: false
-                })
-                setLoanUrl(programLoanInfo[1].url)
-                setProgramName(programLoanInfo[1].name)
-            break;
-            case 2: 
-                setActive({
-                    program0: false,
-                    program1: false,
-                    program2: !active.program2
+                    program1: !active.program1
                 })
                 setLoanUrl(programLoanInfo[1].url)
                 setProgramName(programLoanInfo[1].name)
@@ -168,13 +156,12 @@ const LoanApp = React.forwardRef((props, ref) => {
                 <label htmlFor="email">Email address</label>
                 <input className="border-2 rounded border-primary text-center py-2 mb-4 w-64" type="email" name="email" placeholder="Enter your email address" onChange={handleChange} value={email} required />
                 {multiplePrograms && 
-                    <div className="w-full lg:w-1/2 px-8 lg:px-0">
+                    <div className="w-full lg:w-64 lg:px-0">
                         <p className="text-center text-sm">Select a {props.schoolName} program</p>
                         
                         {/* WHEN ADDING AND REMOVING PROGRAMS, start with 0 and increment by 1 (0, 1, 2, 3...) for active.program#, toggleIsActive(#), and programNameAndURL(#) */}
                         <p className={active.program0 ? activeClass : inactiveClass} onClick={() => toggleIsActive(0)}>{programLoanInfo[0].name}</p>
                         <p className={active.program1 ? activeClass : inactiveClass} onClick={() => toggleIsActive(1)}>{programLoanInfo[1].name}</p>
-                        <p className={active.program2 ? activeClass : inactiveClass} onClick={() => toggleIsActive(2)}>{programLoanInfo[2].name}</p>
                     </div>
                 }
                 <div className="hidden">

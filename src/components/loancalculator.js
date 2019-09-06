@@ -19,7 +19,7 @@ const LoanCalculator = () => {
     const [interestPayment, setInterestPayment] = useState({ payment36: null, payment60: null })
     const [monthlyPayment, setMonthlyPayment] = useState({ payment36: null, payment60: null })
     const [loanType, setLoanType] = useState('0') // default to 0 for interest-only, 1 for immediate repayment
-    const [multiMetros, showMetros] = useState('')
+    const [multiMetros, showMetros] = useState(false)
     const [loanInformation, setLoanInformation] = useState(programLoanInfo[0].loanInfo)
     const [programName, setProgramName] = useState(programLoanInfo[0].name)
 
@@ -28,26 +28,19 @@ const LoanCalculator = () => {
     switch(program) {
         case programLoanInfo[0].name: // use this info for default case at bottom
             setLoanInformation(programLoanInfo[0].loanInfo)
-            setLoanType('0')
             setProgramName(programLoanInfo[0].name)
             break;
         case programLoanInfo[1].name: 
             setLoanInformation(programLoanInfo[1].loanInfo)
-            setLoanType('0')
             setProgramName(programLoanInfo[1].name)
-            showMetros('Program 2')
             break;
         case programLoanInfo[2].name: 
             setLoanInformation(programLoanInfo[2].loanInfo)
-            setLoanType('0')
             setProgramName(programLoanInfo[2].name)
-            showMetros('Program 3')
             break;
         default: // info below needs to match info from first program
             setLoanInformation(programLoanInfo[0].loanInfo)
-            setLoanType('0')
             setProgramName(programLoanInfo[0].name)
-            showMetros(false)
             break;
     }
 }
