@@ -22,8 +22,8 @@ const LoanApp = React.forwardRef((props, ref) => {
     const formName = `${props.schoolName}_apply_now program-apply flex flex-col items-center`
     const costOfLiving = true // set to false of cost of living is not available
     const multiplePrograms = true // set to false if there is only one program
-    const onlinePrograms = false // set to true if there is at least one online/remote program offered
-    const schoolHQState = 'WA' // if online programs are offered, put the two letter abbreviation for school headquarters state
+    const onlinePrograms = true // set to true if there is at least one online/remote program offered
+    const schoolHQState = 'CA' // if online programs are offered, put the two letter abbreviation for school headquarters state
 
     const handleChange = e => {
         setEmail(e.target.value)
