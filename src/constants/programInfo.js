@@ -12,7 +12,7 @@ export const headline = "Learn to Code at Bloc" // update headline as appropriat
 
 export const leadContent = {
     header: "Your last step on the path toward changing your career",
-    paragraph: `${schoolName} offers structured, online training programs in software development to fit busy schedules. ${schoolName} partners with Skills Fund to offer tuition and cost of living financing so more students like you can access their program.`
+    paragraph: `${schoolName} offers structured, online training programs in software development to fit busy schedules. ${schoolName} partners with Skills Fund to offer tuition financing so more students like you can access their program.`
 }
 
 export const threeStepCardText = {
