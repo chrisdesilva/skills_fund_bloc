@@ -26,7 +26,7 @@ export const threeStepCardText = {
 
 export const netlifyFormName = 'bloc_contact'
 
-export const GATracking = 'UA-99445258-41'
+export const GATracking = 'UA-68312423-1'
 
 // ***** END GENERAL SCHOOL INFO ***** 
 
