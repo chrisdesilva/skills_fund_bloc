@@ -15,5 +15,6 @@
   to = "/"
 
 [[redirects]]
-https://bloc-pt.skills.fund/* https://bloc.skills.fund/:splat 301!
+from = "https://bloc-pt.skills.fund/*" 
+to = "https://bloc.skills.fund/:splat 301!"
 
