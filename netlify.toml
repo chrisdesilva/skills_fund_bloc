@@ -13,3 +13,7 @@
 [[redirects]]
   from = "/web-developer-track"
   to = "/"
+
+[[redirects]]
+https://bloc-pt.skills.fund/* https://bloc.skills.fund/:splat 301!
+
