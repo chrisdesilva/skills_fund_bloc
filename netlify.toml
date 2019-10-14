@@ -16,6 +16,6 @@
 
 [[redirects]]
 from = "https://bloc-pt.skills.fund"
-to = "https://bloc.skills.fund"
+to = "/"
 status = 301
 force = false
