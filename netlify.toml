@@ -1,0 +1,21 @@
+[[redirects]]
+  from = "/go"
+  to = "/?utm_source=school&utm_medium=printedskfbrochure&utm_campaign=studentbrochure"
+
+[[redirects]]
+  from = "/accepted"
+  to = "/"
+
+[[redirects]]
+  from = "/designer-track"
+  to = "/"
+
+[[redirects]]
+  from = "/web-developer-track"
+  to = "/"
+
+[[redirects]]
+from = "https://bloc-pt.skills.fund"
+to = "https://bloc.skills.fund"
+status = 301
+force = false
