@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ebook from '../images/ebook.jpg'
-import { schoolName,skfURL } from '../constants/programInfo'
+import { schoolName, skfURL } from '../constants/programInfo'
 
 const LeadCaptureForm = props => {
 
