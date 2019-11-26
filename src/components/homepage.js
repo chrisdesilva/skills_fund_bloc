@@ -2,6 +2,7 @@ import React from 'react'
 import ReactGA from 'react-ga'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Popup from '../components/popup'
 import Banner from '../components/banner'
 import LeadContent from '../components/leadcontent'
 import ThreeSteps from '../components/threesteps'
@@ -25,7 +26,8 @@ class Homepage extends React.Component {
           termInfo: false,
           faq: false,
           eligibility: false,
-          contact: false
+          contact: false,
+          popup: true
         }
         this.threesteps = React.createRef();
         this.apply = React.createRef();
@@ -56,6 +58,22 @@ class Homepage extends React.Component {
         //   action: 'click',
         //   label: 'footer'
         // })
+      }
+
+      trackPopup = () => {
+        ReactGA.event({
+          category: `Student Lead Capture | ${this.props.schoolName}`,
+          action: 'click',
+          label: 'popup'
+        })
+      }
+
+      trackStatic = () => {
+        ReactGA.event({
+          category: `Student Lead Capture | ${this.props.schoolName}`,
+          action: 'click',
+          label: 'static'
+        })
       }
     
       activateMoreInfo = () => {
@@ -98,6 +116,14 @@ class Homepage extends React.Component {
         return (
           <Layout>
             <SEO title={this.props.schoolName} />
+            {this.state.popup &&
+              <Popup 
+                IP={this.props.IP}
+                pageUri={this.props.pageUri}
+                schoolName={this.props.schoolName}
+                trackGA={this.trackPopup}
+              />
+            }
             <Banner 
                 howItWorksOnClick={this.scrollToContent}  
                 applyNowOnClick={this.scrollToApply}  
