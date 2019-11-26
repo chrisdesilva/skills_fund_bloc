@@ -47,12 +47,12 @@ const Popup = props => {
             },
             {
             "name": "lead_form_submit_page", 
-            "value": `https://bloc.skills.fund`
+            "value": `https://bottega.skills.fund/`
             }
         ],
         "context": {
             "hutk": hsCookie.hubspotutk,
-            "pageUri": `https://bloc.skills.fund`,
+            "pageUri": `https://bottega.skills.fund/`,
             "pageName": `${props.schoolName} | Skills Fund`,
             "ipAddress": `${props.IP}`
         }

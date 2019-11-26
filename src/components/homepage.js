@@ -148,6 +148,7 @@ class Homepage extends React.Component {
               IP={this.props.IP}
               pageUri={this.props.pageUri}
               schoolName={this.props.schoolName}
+              trackGA={this.trackStatic}
             />
             <InfoButtonContainer 
               terms={this.activateMoreInfo}
