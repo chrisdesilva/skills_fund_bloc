@@ -17,7 +17,7 @@ const FAQ = () => {
      const [q8, showq8] = useState(false)
      const [q9, showq9] = useState(false)
      const [q10, showq10] = useState(false)
-     const [q11, showq11] = useState(false)
+     const [q11, showq11] = useState(false) 
 
      return (
           <div className="mx-2 lg:mx-10 p-8 shadow rounded">
@@ -51,11 +51,23 @@ const FAQ = () => {
 
           <div onClick={() => showq3(!q3)}><h3 className="text-lg uppercase text-primary flex items-center cursor-pointer"><span className="text-sm"><FaAngleDown /></span>how and when will i repay my loan?</h3></div>
                <Collapse isOpened={q3} springConfig={{stiffness: 150, damping: 30}}>
-                    <p>Upon loan acceptance, we will provide you with several options for making payments, including automated payments. You may create an account at <a href="https://www.aspireservicingcenter.com/" target="_blank" rel="noreferrer noopener" className="text-primary">AspireServicingCenter.com</a> at any time to manage payments and account balance.</p>
-                    {faq.interestOnly && <p><strong>Interest-Only Loans: </strong>You will start paying interest on your loan roughly one month after your loan is disbursed to the school. Disbursement occurs on the second Wednesday after program start. You will make interest-only payments while in program and for 60 days following program completion.</p>}
-                    {faq.interestOnly && <p>You will start making full monthly payments (interest plus principal) after your two-month grace period ends. This 60-day payment grace period helps you to keep your eye on finding the right job following program completion.</p>}
-                    {faq.immediateRepayment && <p><strong>Immediate Repayment Loans: </strong>You will start making full monthly payments (interest plus principal) roughly one month after your loan is disbursed to your school. Disbursement occurs on the second Wednesday after program start.</p>}
-                    <p className="mb-0 pb-4">There is no prepayment penalty with a Skills Fund loan.</p>
+                    <p>You have several options, including automated payments! After you apply for a loan, we’ll help you set up your repayment account. About one month after your program starts, you’ll make your first loan payment.</p>
+                    <p>You’ll make monthly payments until your loan is fully repaid, and we’re happy to say there’s no prepayment penalty or fee for early payments on Skills Fund loans. You can choose to pay the minimum monthly payment, or you can make larger payments. You have the flexibility to pay off your loan anytime before your loan term ends!</p>
+                    {faq.multipleLoanTypes && <>
+                         <p>Skills Fund offers two repayment options. Check out the loan calculator to decide which repayment option is the best fit for you!</p>
+                         <ul>
+                              <li className="list-disc"><strong>Interest-only</strong> loans allow you to hold on to more of your savings during your training. You’ll start making low, interest-only payments about one month after your program starts and continue those payments for two months after the program ends. After this interest-only period, you’ll start making full payments (interest + principal).</li>
+                              <li className="list-disc"><strong>Immediate repayment</strong> loans allow you to quickly get started on repayment. You’ll start making full payments about one month after your program starts.</li>
+                         </ul>
+                    </>
+                    }
+                    {!faq.multipleLoanTypes && faq.interestOnly && 
+                         <p>Skills Fund’s interest-only loans allow you to hold on to more of your savings during your training. You’ll start making low, interest-only payments about one month after your program starts and continue those payments for two months after the program ends. After this interest-only period, you’ll start making full payments (interest + principal).</p>
+                    }
+                    <p>Aspire and Launch are the loan servicers for Skills Fund’s loans. This means Aspire or Launch will collect your monthly payments during the repayment phase of your loan. All loans applied for <strong>before December 26th, 2019</strong> will be serviced by Aspire. All loans applied for <strong>on or after December 26th, 2019</strong> will be serviced by Launch. </p>
+                    <p>Need to pay your loan? Have a question about repayment on an existing loan?</p>
+                    <ul className="mb-0 pb-4"><li className="list-disc">If you applied for your loan before December 26th, 2019, visit <a className="font-bold text-primary" href="https://www.aspireservicingcenter.com/" target="_blank" rel="noreferrer noopener">Aspire online</a> or at 1-800-243-7552. </li>
+                    <li className="list-disc">If you applied for your loan on or after December 26th, 2019, visit <a className="font-bold text-primary" href="https://prod.launchservicing.com/Borrower/Login.aspx" target="_blank" rel="noreferrer noopener">Launch online</a> or at 877-354-2629. </li></ul>
                </Collapse>
 
           
@@ -104,16 +116,15 @@ const FAQ = () => {
                     <p>During the loan application process, we will ask you for the following information:</p>
                     <ul className="list-disc mb-0 pb-4">
                          <li>Full name</li>
-                         <li>Address</li>
-                         <li>Email and other contact information</li>
+                         <li>Email address and other contact information</li>
                          <li>Social Security Number</li>
                          <li>Date of birth</li>
                          <li>Loan amount requested</li>
-                         <li>U.S. Citizenship/Permanent Resident status</li>
-                         <li>Current income <strong>(not a factor in credit decision)</strong></li>
-                         <li>Current employment status <strong>(not a factor in credit decision)</strong></li>
-                         <li>Three personal references</li>
-                         <li>Cosigner information (if applicable)</li>
+                         <li>One personal reference</li>
+                         <li>Cosigner name and contact information (if applying with a cosigner)</li>
+                         <li>Citizenship / Permanent Resident (Green Card) status</li>
+                         <li>Current income (not a factor in credit decision)</li>
+                         <li>Current employment status (not a factor in credit decision)</li>
                     </ul>
                </Collapse>
 
