@@ -1,6 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { FaTimesCircle } from 'react-icons/fa';
-import { UnmountClosed as Collapse } from 'react-collapse';
+import React, { useState } from 'react';
 
 const CookieBanner = () => {
 	const [ isPopupVisible, showPopup ] = useState(true);

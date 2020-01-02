@@ -101,9 +101,10 @@ const FAQ = () => {
                </Collapse>
 
           <div onClick={() => showq8(!q8)}><h3 className="text-lg uppercase text-primary flex items-center cursor-pointer"><span className="text-sm"><FaAngleDown /></span>do i need a cosigner?</h3></div>
-               <Collapse isOpened={q8} springConfig={{stiffness: 150, damping: 30}}>
-                    <p>If you do not meet the loan underwriting criteria, a cosigner may be needed. You can (1) apply individually, and should you not be approved, you may be given the opportunity to amend your application with a cosigner, or (2) initiate your loan process with a cosigner.</p>
-                    <p className="mb-0 pb-4"><strong>Please note:</strong> We advise you to apply individually to begin, and should you not be credit approved, you may be given the opportunity to amend your application with a cosigner.</p>
+          <Collapse isOpened={q8} springConfig={{stiffness: 150, damping: 30}}>
+                    <p>There are two ways to qualify for a Skills Fund loan: on your own, or with a cosigner. Cosigners can strengthen your application’s overall credit health. </p>
+                    <p>If you decide to apply with a cosigner, we’ll evaluate them with the same underwriting criteria we use to evaluate you. You can also choose to apply individually to begin, and if you receive a denial, you may have the opportunity to add a cosigner to your original application.</p>
+                    <p className="mb-0 pb-4">Learn more about our <a className="font-bold text-primary" href="https://skills.fund/students/will-my-loan-application-be-approved" target="_blank" rel="noreferrer noopener"> credit and eligibility criteria</a> and see our guide to <a className="font-bold text-primary" href="https://skills.fund/resources/how-to-find-the-right-cosigner-for-your-loan" target="_blank" rel="noreferrer noopener">finding the right cosigner.</a></p>
                </Collapse>
  
           <div onClick={() => showq9(!q9)}><h3 className="text-lg uppercase text-primary flex items-center cursor-pointer"><span className="text-sm"><FaAngleDown /></span>when can i apply for a loan?</h3></div>
