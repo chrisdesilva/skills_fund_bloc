@@ -18,7 +18,7 @@ const CookieBanner = () => {
 						className="font-bold text-primary"
 					>
 						{' '}
-						privacy policy
+						privacy notice
 					</a>{' '}
 					to learn more.
 				</p>
