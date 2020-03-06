@@ -318,6 +318,27 @@ const LoanCalculator = () => {
           Students may borrow from ${minLoanAmt} to $
           {loanInformation.maxLoanAmt}
         </p>
+        <p className="font-bold text-xs text-center lg:hidden mt-4">
+          Enroll in Autopay to reduce your interest rate. Learn more{" "}
+          <a
+            href="https://skills.fund/frequently-asked-questions/#autopay"
+            className="text-primary font-bold"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            here
+          </a>
+          .{" "}
+          <a
+            href="https://skills.fund/autopay-terms-and-conditions"
+            className="text-primary font-bold"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Terms and conditions
+          </a>{" "}
+          apply.
+        </p>
         {loanType === "0" && (
           <p className="text-xs text-center hidden lg:inline mb-2">
             Make interest-only payments while in the program. Two months after
