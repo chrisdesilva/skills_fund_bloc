@@ -159,10 +159,8 @@ const FAQ = () => {
       <Collapse isOpened={q4} springConfig={{ stiffness: 150, damping: 30 }}>
         <p>
           You have several options, including automated payments! After you
-          apply for a loan, we’ll help you set up your repayment account.
-          Depending on your repayment plan, you’ll make your first payment one
-          month after your program starts or three months after your program
-          ends.
+          apply for a loan, we’ll help you set up your repayment account. You’ll
+          make your first payment one month after your program starts.
         </p>
         <p>
           You’ll make monthly payments until your loan is fully repaid, and
@@ -173,7 +171,7 @@ const FAQ = () => {
         </p>
         {faq.multipleLoanTypes && (
           <>
-            <p>Skills Fund offers three repayment options.</p>
+            <p>Skills Fund offers two repayment options.</p>
             <ul>
               <li className="list-disc">
                 <strong>Interest-only</strong> loans allow you to hold on to
@@ -203,9 +201,7 @@ const FAQ = () => {
             interest-only payments about one month after your program starts and
             continue those payments for three months after the program ends.
             After this interest-only period, you’ll start making full payments
-            (interest + principal). Skills Fund’s deferred repayment loans allow
-            you to make no payments during your training. You’ll start making
-            full payments three months after your program.
+            (interest + principal).
           </p>
         )}
         <p>
