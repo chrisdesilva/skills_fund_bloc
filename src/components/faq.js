@@ -188,11 +188,11 @@ const FAQ = () => {
                 get started on repayment. You’ll start making full payments
                 about one month after your program starts.
               </li>
-              <li className="list-disc">
+              {/* <li className="list-disc">
                 <strong>Deferred Repayment</strong> allows you to make no
                 payments while you’re in school and for three months after. Then
                 you’ll start making full payments (interest + principal).
-              </li>
+              </li> */}
             </ul>
           </>
         )}

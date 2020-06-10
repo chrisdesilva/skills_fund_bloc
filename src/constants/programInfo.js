@@ -80,10 +80,10 @@ export const previewText = {
   // subheadline:
   //   "We offer a straightforward loan so you can focus on your program and transform your future.",
   cards: [
-    {
-      heading: "Deferred Repayment",
-      body: "Make no payments while you study and for three months after.",
-    },
+    // {
+    //   heading: "Deferred Repayment",
+    //   body: "Make no payments while you study and for three months after.",
+    // },
     {
       heading: "Interest Only",
       body:
