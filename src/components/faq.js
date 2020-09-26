@@ -159,8 +159,10 @@ const FAQ = () => {
       <Collapse isOpened={q4} springConfig={{ stiffness: 150, damping: 30 }}>
         <p>
           You have several options, including automated payments! After you
-          apply for a loan, we’ll help you set up your repayment account. You’ll
-          make your first payment one month after your program starts.
+          apply for a loan, we’ll help you set up your repayment account.
+          Depending on your repayment plan, you’ll make your first payment one
+          month after your program starts or three months after your program
+          ends.
         </p>
         <p>
           You’ll make monthly payments until your loan is fully repaid, and
@@ -171,7 +173,7 @@ const FAQ = () => {
         </p>
         {faq.multipleLoanTypes && (
           <>
-            <p>Skills Fund offers two repayment options.</p>
+            <p>Skills Fund offers three repayment options.</p>
             <ul>
               <li className="list-disc">
                 <strong>Interest-only</strong> loans allow you to hold on to
@@ -186,11 +188,11 @@ const FAQ = () => {
                 get started on repayment. You’ll start making full payments
                 about one month after your program starts.
               </li>
-              {/* <li className="list-disc">
+              <li className="list-disc">
                 <strong>Deferred Repayment</strong> allows you to make no
                 payments while you’re in school and for three months after. Then
                 you’ll start making full payments (interest + principal).
-              </li> */}
+              </li>
             </ul>
           </>
         )}
@@ -201,7 +203,9 @@ const FAQ = () => {
             interest-only payments about one month after your program starts and
             continue those payments for three months after the program ends.
             After this interest-only period, you’ll start making full payments
-            (interest + principal).
+            (interest + principal). Skills Fund’s deferred repayment loans allow
+            you to make no payments during your training. You’ll start making
+            full payments three months after your program.
           </p>
         )}
         <p>
@@ -402,7 +406,10 @@ const FAQ = () => {
           credit health. In some cases, adding a cosigner can improve your
           interest rate. If you are concerned about your credit health, consider
           adding a cosigner with strong credit health to potentially improve
-          your interest rate.
+          your interest rate. Additionally, a student who is not a U.S. citizen
+          or U.S. permanent resident or has Deferred Action for Childhood
+          Arrival (DACA) status may apply with a creditworthy cosigner who is a
+          U.S. citizen or U.S. permanent resident.
         </p>
         {/* <p className="mb-0 pb-4">
           Learn more about our{" "}
