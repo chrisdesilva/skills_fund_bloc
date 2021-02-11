@@ -7,5 +7,5 @@ exports.createPages = ({ graphql, actions }) => {
     // createRedirect({ fromPath: '/designer-track', toPath: '/'})
     // createRedirect({ fromPath: '/web-developer-track', toPath: '/'})
    
-    createRedirect({ fromPath: /', toPath: 'https://thinkful.skills.fund/', isPermanent: true, force: true })
+    createRedirect({ fromPath: '/', toPath: 'https://thinkful.skills.fund/', isPermanent: true, force: true })
 }
